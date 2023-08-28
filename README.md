@@ -10,40 +10,39 @@ The colcon_starter_ws includes all the files needed to move the GP-8 robot using
 
 The repository first explains how to configure the robot for the simulation. The other part includes information on how to run a robot using the MotoROS2 interface.
 
-The repository includes files that were verified for ROS2 (Humble).
+The repository includes files that were verified for ROS2 [Humble](https://docs.ros.org/en/humble/index.html).
 
 The ROS 2 interface (MotoROS2) to the Yaskawa robot controller can be found [here](https://github.com/Yaskawa-Global/motoros2).
 
 As mentioned, the repository and the following information have been produced to run GP-8 robot, however, all the steps are the same for other Yaskawa robots.
 
-##
----
+## Information
 
-ROS 2 packages in colcon_starter_ws are as follows:
 
-cpp_pubsub --simple C++ programs to move robot without path planener
-dev_opencv_py --simple Python programs to subscribe and publish camera imgages - used for camera tracking -  /queue_traj_point - control mode - it refers to gp8_stream_vision.py  in gp8_interface package
-gp8_interface --simple Python programs to move robot without path planener to test different motion mode
-hello_moveit -- simple C++ programs calling path-planener by Moveit
-motoman_resources -- used for color and material definition of the robot only as reference
-motoXY -- configuration files for RViz created by Moveit Assistant 
-motoros2_client_interface_dependencies --MotoROS2 specific 
-ros-industrial --MotoROS2 specific
-yaskawa-global --MotoROS2 specific
-motoros2_config.yaml --config file to be deployed into YRC-1000
+The colcon_starter_ws is a ROS2 workspace and inludes packages as follows:
 
----
+* ```cpp_pubsub``` --simple C++ programs to move robot without path planener
+* ```dev_opencv_py``` --simple Python programs to subscribe and publish camera imgages - used for camera tracking -  /queue_traj_point - control mode - it refers to gp8_stream_vision.py  in gp8_interface package
+* ```gp8_interface``` --simple Python programs to move robot without path planener to test different motion mode
+* ```hello_moveit``` -- simple C++ programs calling path-planener by Moveit
+* ```motoman_resources``` -- used for color and material definition of the robot only as reference
+* ```motoXY``` -- configuration files for RViz created by Moveit Assistant 
+* ```motoros2_client_interface_dependencies``` --MotoROS2 specific 
+* ```ros-industrial``` --MotoROS2 specific
+* ```yaskawa-global``` --MotoROS2 specific
+* ```motoros2_config.yaml``` --config file to be deployed into YRC-1000
 
-#Note_1.
+## Notes
+
+### Note 1
 For simplicty the autor of the colcon_picknik_ws changed the joint names as follows
 from:
 [joint_1_s, joint_2_l, joint_3_u, joint_4_r, joint_5_b, joint_6_t]
 to:
 [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6]
 
----
 
-#Note_2.
+### Note 2
 The process of moving robot is as follows (can be simplified as one call but the author applied this way to keep simplicty during development process):
 a. ros2 launch moveit_resources_moto_moveit_config  yaskawa_hw.launch.py
 or
@@ -62,9 +61,8 @@ ros2 run gp8_interface move_on_traj
 d. disable Yaskawa drives:
 ros2 run cpp_pubsub disable_client
 
----
 
-#Note_3.
+### Note 3
 in motoros2_config.yaml to run robot from ROS 2 we have to mostly change (changes reflect current configuration in colcon_picknik_ws):
 
 agent_ip_address: 192.168.255.10
@@ -76,9 +74,8 @@ joint_names:
      joint_4, joint_5, joint_6]
 joint_states: default
 
----
 
-Configuration & launch & run
+## Configuration & launch & run
 
 1. Follow https://github.com/yaskawa-global/motoros2_interfaces  to configure MotoROS2 gp8_interface
 
@@ -94,4 +91,3 @@ xacro gp8.xacro > moto.urdf
 a. start.launch.py --simulation in RViz
 b. xy_start.launch.py --move robot from RViz
 
----
