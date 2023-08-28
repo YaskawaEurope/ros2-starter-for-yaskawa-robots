@@ -6,7 +6,7 @@ in the context of trajectory generation.
 
 The repository offers files (Python, C++) to move robots based on the trajectory specified inside the program.
 
-The ```colcon_starter_ws``` includes all the files needed to move the GP-8 robot using MotoROS2.
+The colcon_starter_ws includes all the files needed to move the GP-8 robot using MotoROS2.
 
 The repository first explains how to configure the robot for the simulation. The other part includes information on how to run a robot using the MotoROS2 interface.
 
@@ -35,32 +35,60 @@ The colcon_starter_ws is a ROS2 workspace and inludes packages as follows:
 ## Notes
 
 ### Note 1
-For simplicty the autor of the colcon_picknik_ws changed the joint names as follows
+For simplicty the orignal joint names have been changed, as follows:
 from:
+```bash
 [joint_1_s, joint_2_l, joint_3_u, joint_4_r, joint_5_b, joint_6_t]
+```
 to:
+```bash
 [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6]
+```
 
+### Note 2 (Quick-Start)
 
-### Note 2
-The process of moving robot is as follows (can be simplified as one call but the author applied this way to keep simplicty during development process):
-a. ros2 launch moveit_resources_moto_moveit_config  yaskawa_hw.launch.py
+The process of moving robot is as follows (can be simplified as one call but for debugging process we keep these steps separately):
+
+```bash
+git clone 
+cd colcon_starter_ws
+colcon build
+source /install/setup.bash
+
+```
+#### launch micro-ros agent
+
+```bash
+ros2 launch moveit_resources_moto_moveit_config  yaskawa_hw.launch.py
+```
 or
-a. docker run -it --rm --net=host microros/micro-ros-agent:humble udp4 --port 8888
+```bash
+sudo docker run -it --rm --net=host microros/micro-ros-agent:humble udp4 --port 8888
 
-b. enable Yaskawa drives:
+```
+
+#### enable Yaskawa drives:
+
+```bash
 ros2 run cpp_pubsub enable_client
+```
 
-c. start RViz
+start RViz
+```bash
 ros2 launch moveit_resources_moto_moveit_config  xy_start.launch.py 
+```
 or
+```bash
 ros2 run hello_moveit joint_hello_moveit
+```
 or
+```bash
 ros2 run gp8_interface move_on_traj
-
-d. disable Yaskawa drives:
+```
+#### disable Yaskawa drives:
+```bash
 ros2 run cpp_pubsub disable_client
-
+```
 
 ### Note 3
 in motoros2_config.yaml to run robot from ROS 2 we have to mostly change (changes reflect current configuration in colcon_picknik_ws):
