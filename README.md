@@ -1,8 +1,22 @@
-This respository specifies the process of configuring the Moveit path planner for the YASKAWA robot GP-8 (or others in the same family)
+
+## Introduction
+
+This repository specifies the process of configuring the Moveit path planner for the YASKAWA robot GP-8 (or others in the same family)
 in the context of trajectory generation. 
+
+The repository offers files (Python, C++) to move robots based on the trajectory specified inside the program.
 
 The colcon_starter_ws includes all the files needed to move the GP-8 robot using MotoROS2.
 
+The repository first explains how to configure the robot for the simulation. The other part includes information on how to run a robot using the MotoROS2 interface.
+
+The repository includes files that were verified for ROS2 (Humble).
+
+The ROS 2 interface (MotoROS2) to the Yaskawa robot controller can be found [here](https://github.com/Yaskawa-Global/motoros2).
+
+As mentioned, the repository and the following information have been produced to run GP-8 robot, however, all the steps are the same for other Yaskawa robots.
+
+##
 ---
 
 ROS 2 packages in colcon_starter_ws are as follows:
