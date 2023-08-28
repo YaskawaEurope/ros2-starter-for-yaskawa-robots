@@ -6,7 +6,7 @@ in the context of trajectory generation.
 
 The repository offers files (Python, C++) to move robots based on the trajectory specified inside the program.
 
-The colcon_starter_ws includes all the files needed to move the GP-8 robot using MotoROS2.
+The ```colcon_starter_ws``` includes all the files needed to move the GP-8 robot using MotoROS2.
 
 The repository first explains how to configure the robot for the simulation. The other part includes information on how to run a robot using the MotoROS2 interface.
 
