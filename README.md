@@ -18,7 +18,10 @@ The instructions have to be followed accordingly in order to configure the Yaska
 
 As mentioned, the repository and the following information have been produced to run GP-8 robot, however, all the steps are the same for other Yaskawa robots.
 
-The complete process of preparing configuration files and motion application is depicted  below,
+The complete process of preparing configuration files and motion applications is depicted  below,
+
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/26a82a97-be87-45ee-8bb0-4a0c87b02e7d)
+
 
 
 The MotoPlus application (MotoROS2 interface) can be downloaded from:
