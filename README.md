@@ -146,7 +146,10 @@ In currect folder run,
 ros2 launch moveit_setup_assistant setup_assistant.launch.py 
 ```
 
-For a completely new robot configuration, choose Create New Moveit and choose moto.urdf, as on image below,
+For a completely new robot configuration, choose Create New Moveit and choose moto.urdf, as on the image below,
+
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/d35aa9b4-bb95-4f2f-a77a-30c91317aefa)
+
 
 
 Follow the steps described [here](https://moveit.picknik.ai/main/doc/examples/setup_assistant/setup_assistant_tutorial.html),
