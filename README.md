@@ -49,7 +49,7 @@ The colcon_starter_ws is a ROS2 workspace and includes packages as follows:
 ## Notes
 
 ### Note 1
-For simplicity the orignal joint names have been changed as follows:
+For simplicity, the original joint names have been changed as follows:
 From:
 ```bash
 [joint_1_s, joint_2_l, joint_3_u, joint_4_r, joint_5_b, joint_6_t]
@@ -60,7 +60,7 @@ To:
 ```
 
 ### Note 2
-in motoros2_config.yaml to run robot from ROS 2 we have to mostly change (changes reflect current configuration in colcon_picknik_ws):
+In motoros2_config.yaml to run robot from ROS 2 we have to change (changes reflect current configuration in colcon_picknik_ws) mostly:
 ```bash
 agent_ip_address: 192.168.255.10
 agent_port_number: 8888
@@ -131,9 +131,9 @@ ros2 run cpp_pubsub disable_client
 
 ## Robot configuration
 
-1. Follow https://github.com/yaskawa-global/motoros2_interfaces  to configure MotoROS2 gp8_interface
+Follow https://github.com/yaskawa-global/motoros2_interfaces  to configure MotoROS2 gp8_interface
 
-2. Now we will configure the GP-8 robot using Moveit Setup Assistant,
+Now we will configure the GP-8 robot using Moveit Setup Assistant,
 
 First, we convert ```.xacro ``` to ```.urdf``` for the robot specific.
 
