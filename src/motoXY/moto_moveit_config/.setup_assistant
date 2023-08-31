@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: moveit_resources_moto_description
+    relative_path: urdf/moto.urdf
+  srdf:
+    relative_path: config/moto.srdf
+  package_settings:
+    author_name: Markus Buchholz
+    author_email: markus@markus
+    generated_timestamp: 1689413833

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="moto">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import panda urdf file -->
+    <xacro:include filename="$(find moveit_resources_moto_description)/urdf/moto.urdf" />
+
+    <!-- Import moto ros2_control description -->
+    <!-- <xacro:include filename="moto.ros2_control.xacro" />
+
+    <xacro:moto_ros2_control name="motoFakeSystem" initial_positions_file="$(arg initial_positions_file)"/> -->
+</robot>

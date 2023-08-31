@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/markus/gp8_com_ws/install/motoros2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/markus/gp8_com_ws/install/gp8_interface/lib/python3.10/site-packages",
+        "/home/markus/motoman_ws/install/ros2_grasping/local/lib/python3.10/dist-packages",
+        "/home/markus/motoman_ws/install/ros2_data/local/lib/python3.10/dist-packages",
+        "/home/markus/colcon_ws/install/motoros2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/markus/micro_ros_agent_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/markus/gp8_com_ws/install/motoros2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/markus/gp8_com_ws/install/gp8_interface/lib/python3.10/site-packages",
+        "/home/markus/motoman_ws/install/ros2_grasping/local/lib/python3.10/dist-packages",
+        "/home/markus/motoman_ws/install/ros2_data/local/lib/python3.10/dist-packages",
+        "/home/markus/colcon_ws/install/motoros2_interfaces/local/lib/python3.10/dist-packages",
+        "/home/markus/micro_ros_agent_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
