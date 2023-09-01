@@ -5,7 +5,7 @@ This repository specifies the process of configuring the Moveit path planner for
 
 The repository offers files (Python, C++) to move robots based on the trajectory specified inside the program.
 
-The colcon_starter_ws includes all the files needed to move the GP-8 robot using MotoROS2.
+The ```ros2-starter-for-yaskawa-robots``` includes all the files needed to move the GP-8 robot using MotoROS2.
 
 The repository can be considered as a template for the other robots. In that case the changes for the robot configuration and name have to be applied.
 
@@ -39,7 +39,7 @@ An ROS 2 application (also known as an ROS 2 node) communicates with the Yaskawa
 
 ## Content
 
-The colcon_starter_ws is a ROS2 workspace and includes packages as follows:
+The ```ros2-starter-for-yaskawa-robots``` is a ROS2 workspace and includes packages as follows:
 
 * ```cpp_pubsub``` --simple C++ programs to move robot without path planener
 * ```dev_opencv_py``` --simple Python programs to subscribe and publish camera images - used for camera tracking -  /queue_traj_point - control mode - it refers to gp8_stream_vision.py  in gp8_interface package
@@ -173,14 +173,14 @@ Follow the steps described [here](https://moveit.picknik.ai/main/doc/examples/se
 Assistant creates pkg with ```.launch``` files. We do not use them in the current process.
 We are going to use ```.launch``` files to run only simulation (in rViz) or run robot (in rViz) and command instruction to real robot GP-8.
 
-The ```colcon_starter_ws```includes all necessary files. 
+The ```ros2-starter-for-yaskawa-robots```includes all necessary files. 
 
 ## Run robot simulation
 
 run following commands,
 
 ``` bash
-cd colcon_starter_ws
+cd ros2-starter-for-yaskawa-robots
 colcon build
 source install/setup.bash
 run2 ros2 launch moveit_resources_moto_moveit_config sim_start.launch.py
@@ -189,7 +189,7 @@ run2 ros2 launch moveit_resources_moto_moveit_config sim_start.launch.py
 from other terminal move robots,
 
 ``` bash
-cd colcon_starter_ws
+cd ros2-starter-for-yaskawa-robots
 source install/setup.bash
 ros2 run hello_moveit sim_hello_moveit
 ```
@@ -230,7 +230,7 @@ ros2 run cpp_pubsub disable_client
 
 #### For option 2
 On terminal run RViz,
-``` bash
+```bash
 run2 ros2 launch moveit_resources_moto_moveit_config xy_start.launch.py
 ```
 In other terminal, you need to enable drives, 
