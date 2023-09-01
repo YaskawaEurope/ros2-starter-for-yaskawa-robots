@@ -183,7 +183,7 @@ run following commands,
 cd ros2-starter-for-yaskawa-robots
 colcon build
 source install/setup.bash
-run2 ros2 launch moveit_resources_moto_moveit_config sim_start.launch.py
+ros2 launch moveit_resources_moto_moveit_config sim_start.launch.py
 ```
 
 from other terminal move robots,
