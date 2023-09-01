@@ -20,8 +20,7 @@ As mentioned, the repository and the following information have been produced to
 
 The complete process of preparing configuration files and motion applications is depicted  below,
 
-![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/26a82a97-be87-45ee-8bb0-4a0c87b02e7d)
-
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/d4e93725-8c51-42e5-9499-9f4d9c1f7bb2)
 
 
 The MotoPlus application (MotoROS2 interface) can be downloaded from:
@@ -30,8 +29,15 @@ The MotoPlus application (MotoROS2 interface) can be downloaded from:
 
 Consider [Quick Start paragraph](#quick-start-robot-motion) to move robot at once.
 
-## Information
 
+## Technical background
+
+An ROS 2 application (also known as an ROS 2 node) communicates with the Yaskawa Robot Controller (RC) through the MotoROS2 interface. To make this possible, we run a ROS 2 node (whose name is specified in a ```motoros2_config.yaml``` file) on the RC. The ROS 2 node is deployed to the RC as a MotoPlus application. This MotoPlus application (ROS 2 node) helps transfer data between ROS 2 and the RC. The specific configuration details are shown below.
+
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/2cee906c-8994-49be-b647-b6c21657e83c)
+
+
+## Content
 
 The colcon_starter_ws is a ROS2 workspace and includes packages as follows:
 
@@ -89,7 +95,7 @@ The process of moving the robot is as follows (it can be simplified as one call,
 
 ```bash
 git clone 
-cd colcon_starter_ws
+cd ros2-starter-for-yaskawa-robots
 colcon build
 source /install/setup.bash
 
