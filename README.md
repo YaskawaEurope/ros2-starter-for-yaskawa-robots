@@ -36,6 +36,10 @@ An ROS 2 application (also known as an ROS 2 node) communicates with the Yaskawa
 
 ![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/2cee906c-8994-49be-b647-b6c21657e83c)
 
+The example of robot application can be configured as follows,
+
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/1cfef9f8-a4f5-4a96-a1d8-7cafc30fd76f)
+
 
 ## Content
 
