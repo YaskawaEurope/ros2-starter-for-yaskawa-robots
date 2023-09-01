@@ -94,7 +94,7 @@ source install/setup.bash
 The process of moving the robot is as follows (it can be simplified as one call, but for the debugging process, we keep these steps separate):
 
 ```bash
-git clone 
+git clone https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots.git
 cd ros2-starter-for-yaskawa-robots
 colcon build
 source /install/setup.bash
