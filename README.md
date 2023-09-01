@@ -193,6 +193,10 @@ cd ros2-starter-for-yaskawa-robots
 source install/setup.bash
 ros2 run hello_moveit sim_hello_moveit
 ```
+The image below shows the expected results,
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/f97ea1eb-9caf-45e5-84c8-b526f0f3a31c)
+
+
 
 ## Move robot from ROS 2
 
