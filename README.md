@@ -27,7 +27,7 @@ The MotoPlus application (MotoROS2 interface) can be downloaded from:
 * [motoROS2 interface - MotoPlus app](https://github.com/yaskawa-global/motoros2/releases)
 * [robot configuration](https://github.com/ros-industrial/motoman) or [other link](https://github.com/gavanderhoorn/motoman/tree/ros2)
 
-Consider [Quick Start paragraph](#quick-start-robot-motion) to move robot at once.
+Consider [Quick Start paragraph](#quick-start-robot-motion) to move robot at once. But you need to follow mandatory step included here [robot configuration](https://github.com/ros-industrial/motoman) . Generally you need to configure Robot Controller and upload MotoPlus application (MotoROS2  interface).
 
 
 ## Technical background
