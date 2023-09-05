@@ -20,7 +20,7 @@ As mentioned, the repository and the following information have been produced to
 
 The complete process of preparing configuration files and motion applications is depicted  below,
 
-![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/d4e93725-8c51-42e5-9499-9f4d9c1f7bb2)
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/a0faf035-cf78-47ee-b8cb-2f27910799da)
 
 
 The MotoPlus application (MotoROS2 interface) can be downloaded from:
@@ -34,12 +34,19 @@ Consider [Quick Start paragraph](#quick-start-robot-motion) to move robot at onc
 
 An ROS 2 application (also known as an ROS 2 node) communicates with the Yaskawa Robot Controller (RC) through the MotoROS2 interface. To make this possible, we run a ROS 2 node (whose name is specified in a ```motoros2_config.yaml``` file) on the RC. The ROS 2 node is deployed to the RC as a MotoPlus application. This MotoPlus application (ROS 2 node) helps transfer data between ROS 2 and the RC. The specific configuration details are shown below.
 
-![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/2cee906c-8994-49be-b647-b6c21657e83c)
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/60bf3d7b-7963-43e0-9ba8-0f830cf06d34)
+
 
 The example of robot application can be configured as follows,
 
-![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/1cfef9f8-a4f5-4a96-a1d8-7cafc30fd76f)
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/96b742fd-f4fb-4c8b-897d-2389cfdd3a19)
 
+It is worth mentioning that MotoROS2 provides two different ```motion modes```:
+* ```/follow_joint_trajectory```
+* ```/queue_traj_point```
+The setup of both motion modes can be displayed as follows, 
+
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/e31646b3-b9d9-477d-a509-fd41765234de)
 
 ## Content
 
@@ -170,7 +177,8 @@ ros2 launch moveit_setup_assistant setup_assistant.launch.py
 
 For a completely new robot configuration, choose Create New Moveit and choose moto.urdf, as on the image below,
 
-![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/d35aa9b4-bb95-4f2f-a77a-30c91317aefa)
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/5182c42f-ecea-4f87-bf95-41a3860d00e2)
+
 
 Follow the steps described [here](https://moveit.picknik.ai/main/doc/examples/setup_assistant/setup_assistant_tutorial.html),
 
@@ -198,7 +206,8 @@ source install/setup.bash
 ros2 run hello_moveit sim_hello_moveit
 ```
 The image below shows the expected results,
-![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/f97ea1eb-9caf-45e5-84c8-b526f0f3a31c)
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/f858e9ed-d940-4d16-8641-3b01813c2fbd)
+
 
 
 
