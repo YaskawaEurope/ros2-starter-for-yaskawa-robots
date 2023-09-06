@@ -50,7 +50,7 @@ The setup of both motion modes can be displayed as follows,
 
 ## Content
 
-The ```ros2-starter-for-yaskawa-robots``` is a ROS2 workspace and includes packages as follows:
+The ```ros2-starter-for-yaskawa-robots``` is a ROS2 workspace and includes packages as follows,
 
 * ```cpp_pubsub``` --simple C++ programs to move robot without path planener
 * ```dev_opencv_py``` --simple Python programs to subscribe and publish camera images - used for camera tracking -  /queue_traj_point - control mode - it refers to gp8_stream_vision.py  in gp8_interface package
