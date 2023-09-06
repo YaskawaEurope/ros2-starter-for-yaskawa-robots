@@ -88,6 +88,12 @@ joint_names:
      joint_4, joint_5, joint_6]
 joint_states: default
 ```
+In this case the agent (Host PC) is configured as follows,
+
+![image](https://github.com/yeu-buchholz/ros2-starter-for-yaskawa-robots/assets/126800101/df96984b-1912-467f-8db6-16449c2d67e3)
+
+
+
 ### Note 3
 
 Check if in each terminal you call ROS, you source ROS 2 (e.g for running ```colcon build```)
